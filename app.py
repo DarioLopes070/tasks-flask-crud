@@ -28,7 +28,7 @@ def create_task():
     # return task.to_json()
     tasks.append(new_task)
     print(tasks)
-    return jsonify({"message":"Nova tarefa criada com sucesso!"})
+    return jsonify({"message":"Nova tarefa criada com sucesso!", "id":new_task.id})
 
 @app.route("/tasks", methods=["GET"])
 def get_tasks():
